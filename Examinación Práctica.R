@@ -1,18 +1,23 @@
+#Abrir la matriz de datos millas
+
+install.packages("datos") #Este comando descarga el paquete
+library(datos) #Este comando abre el paquete
+
 #Vas a trabajar con la matriz de datos
-#
+
 millas<-datos::millas
 
 #1.- Explorar la matriz de datos millas 
 #valor: 5 puntos por cada comando correcto.
 
 
-?millas
-dim(millas)
-names(millas)
-str(millas)
-anyNA(millas)
-typeof(millas)
-View(millas)
+?millas #ayuda
+dim(millas) #dimension
+names(millas) #nombre de las variables
+str(millas) #tipo de variable
+anyNA(millas) #me indica los datos perdidos
+typeof(millas) #tipo de matriz de datos
+View(millas) #visualiza la tabla (data frame)
 
 #Covertiremos la matriz de datos a "data frame".
 millas_diana<-as.data.frame(millas)
@@ -165,7 +170,4 @@ color=c("violetred","violetred3","slateblue3","steelblue4")
 #Construimos el gráfico de la variable x
 barplot(tabla_millas,xlab="cilindros", ylab="frecuencias", 
         main="Gráfico de barras cilindros", col=color)
-
-
-
 
